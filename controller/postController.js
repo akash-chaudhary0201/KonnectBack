@@ -6,12 +6,6 @@ const Comment = require("../models/comment");
 // Controller to create a post :- /tk/teacher/createPost
 exports.createPost = async (req, res) => {
   try {
-    if (req.user.role !== "teacher") {
-      return res.status(403).json({
-        success: false,
-        message: "Only teachers are allowed to create posts",
-      });
-    }
     const { title, content } = req.body;
 
     // Create a new post

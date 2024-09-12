@@ -1,14 +1,13 @@
-const express = require("express");
-const app = express();
 const cors = require("cors");
 const cookierParser = require("cookie-parser");
+
 app.use(cookierParser());
 const jwt = require("jsonwebtoken");
 
 app.use(express.json());
 
 const corsOption = {
-  origin: "http://localhost:5173",
+  origin: "*", // Allows requests from any origin
   credentials: true,
 };
 
