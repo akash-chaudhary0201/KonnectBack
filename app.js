@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 app.use(express.json());
 
 const corsOption = {
-  origin: "*",
+  origin: "https://konnect-front.vercel.app",
   credentials: true,
 };
 
