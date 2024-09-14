@@ -9,6 +9,6 @@ const { isAuthenticated } = require("../middlewares/auth");
 router.post("/teacher/createPost", isAuthenticated, createPost);
 
 // route to get all the post :-
-router.get("/feed", isAuthenticated, getAllPost);
+router.get("/feed", getAllPost);
 
 module.exports = router;
